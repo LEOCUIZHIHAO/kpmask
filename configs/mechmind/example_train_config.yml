@@ -1,0 +1,12 @@
+#模型类型，当前支持的模型有mask_rcnn, point_rend
+model_type: mask_rcnn
+#coco数据集所在位置
+data_root: /data1/Data/COCO_dataset/
+#是否使用resume_training, 若是则加载resume_from_which_model指定的模型，并继续从上一次的epoch和lr继续训练，
+#resume_training主要用于训练机断电等原因导致的训练中断情况
+resume_training: false
+resume_from_which_model: /data1/Data/COCO_dataset/models/epoch_n.pth
+#是否使用finetune_training, 若是则加载finetune_from_which_model指定的模型，从epoch 0开始新的训练
+#finetune_training主要用于针对具体项目，使用新数据集微调模型的场景
+finetune_training: false
+finetune_from_which_model: /data1/Data/COCO_dataset/models/epoch_n.pth
