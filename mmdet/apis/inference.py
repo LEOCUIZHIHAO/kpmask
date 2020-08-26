@@ -159,4 +159,5 @@ def show_result_pyplot(model, img, result, score_thr=0.3, fig_size=(15, 10)):
     img = model.show_result(img, result, score_thr=score_thr, show=False)
     plt.figure(figsize=fig_size)
     plt.imshow(mmcv.bgr2rgb(img))
+    # plt.savefig(save_pth + "/{}.png".format(im_str.split('.')[0]), bbox_inches='tight')
     plt.show()
